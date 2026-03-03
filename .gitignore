@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# env
+.env
+**/.env
+.env.*
+
+# node
+node_modules/
+**/node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# build (если появится)
+dist/
+build/
+
+# prisma (генерация — можно НЕ игнорить migrations, но игнорим output)
+backend/prisma/generated/
