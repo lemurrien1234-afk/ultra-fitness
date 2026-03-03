@@ -1,0 +1,232 @@
+/* 
+   HERO (маленькая версия)
+*/
+
+.hero-small {
+    height: 45vh;
+    background: url('https://www.varyag-club.ru/upload/iblock/c39/l7wcqjqh3f8ne6pfadlx539zoksbj4gs.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-small .hero-content {
+    top: 60%;
+    transform: translateY(-60%);
+    text-align: center;
+}
+
+.hero-small h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero-small p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+
+/* 
+   MINI CALENDAR (дни недели)
+ */
+
+.schedule-calendar {
+    padding: 60px 0 30px;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.day-btn {
+    padding: 12px 20px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .25s;
+    color: #fff;
+}
+
+.day-btn:hover {
+    border-color: #FF7A00;
+    color: #FF7A00;
+}
+
+.day-btn.active {
+    background: #FF7A00;
+    color: #000;
+    border-color: #FF7A00;
+}
+
+
+/* 
+   FILTERS (select)
+ */
+
+.schedule-filters {
+    padding: 10px 0 40px;
+}
+
+.filter-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-container select {
+    padding: 14px 16px;
+    font-size: 16px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #fff;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image: linear-gradient(45deg, transparent 50%, #FF7A00 50%),
+                      linear-gradient(135deg, #FF7A00 50%, transparent 50%);
+    background-position:
+        calc(100% - 20px) calc(50% - 5px),
+        calc(100% - 15px) calc(50% + 5px);
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+}
+
+
+/* 
+   TABLE
+ */
+
+.schedule-table {
+    padding: 10px 0 100px;
+}
+
+.table-wrapper {
+    background: #111;
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    text-align: left;
+    padding: 14px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    color: #FF7A00;
+    font-size: 16px;
+}
+
+tbody td {
+    padding: 14px;
+    border-bottom: 1px solid #222;
+    color: #ddd;
+    font-size: 15px;
+}
+
+tbody tr:hover {
+    background: #161616;
+}
+
+tbody button {
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+
+/* 
+   POPUP "Записаться"
+ */
+
+#popup-sign .popup-content {
+    max-width: 460px;
+    padding: 40px 30px 60px;
+}
+
+#popup-sign input {
+    background: #000;
+    border: 1px solid #222;
+    color: #fff;
+}
+
+#popup-training-name {
+    color: #FF7A00;
+}
+
+
+/* 
+   RESPONSIVE
+ */
+
+@media (max-width: 768px) {
+    .hero-small h1 {
+        font-size: 32px;
+    }
+
+    .calendar-container {
+        flex-wrap: wrap;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-small {
+        height: 40vh;
+    }
+
+    .day-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+/* ССЫЛКА ПОД SELECT "Тренер"*/
+
+.trainer-select-bottom {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.trainer-list-link {
+    color: #FF7A00;
+    font-size: 16px;
+    opacity: .85;
+    transition: .25s;
+}
+
+.trainer-list-link:hover {
+    opacity: 1;
+}
+
+
+/*  КНОПКА "Посмотреть тренеров" = */
+
+.schedule-bottom-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.schedule-bottom-btn .btn-orange.big-btn {
+    padding: 16px 42px;
+    font-size: 18px;
+}
+

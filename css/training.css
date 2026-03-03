@@ -1,0 +1,131 @@
+/* HERO */
+.hero-small {
+    height: 45vh;
+    background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') center/cover no-repeat;
+    position: relative;
+    margin-top: 80px;
+}
+.hero-small::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), #000);
+}
+.hero-small .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+/* GRID */
+.training-list {
+    padding: 80px 0;
+}
+.training-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.training-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    min-height: 460px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: .6s ease;
+}
+
+.training-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.training-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.training-card h3 {
+    margin: 16px;
+    font-size: 20px;
+}
+
+.training-card p {
+    margin: 0 16px 15px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.training-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(255, 122, 0, 0.35);
+    border-color: #ff7a00;
+}
+
+.training-card .btn-orange {
+    margin-left: 16px;
+}
+
+
+/* BUTTON UNDER GRID */
+.center-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/* 
+   МОДАЛКИ
+ */
+
+.modal-bg {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-window {
+    background: #111;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #FF7A00;
+}
+
+.modal-window h3 {
+    margin-bottom: 20px;
+}
+
+.modal-window p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+.training-card,
+.trainer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 16px;
+    min-height: 360px; 
+}
+
+.training-card .btn-orange,
+.trainer-card .btn-orange {
+    margin-top: auto;
+    display: inline-block;
+}

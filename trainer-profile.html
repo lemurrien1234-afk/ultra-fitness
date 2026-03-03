@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль тренера — ULTRA FITNESS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trainer-profile.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+        <a href="index.html" class="logo" id="scrollTopBtn">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">ULTRA FITNESS</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="training.html">Тренировки</a>
+            <a href="trainers.html">Тренеры</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div id="burger" class="burger"><span></span><span></span><span></span></div>
+        <a href="#popup-login" class="btn-orange open-popup header-login-btn">Войти</a>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="training.html">Тренировки</a>
+    <a href="trainers.html">Тренеры</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+</div>
+
+<!-- PROFILE -->
+<section class="trainer-profile">
+    <div class="container">
+
+        <div class="profile-top">
+            <img id="profile-photo" class="profile-photo" src="" alt="">
+            <div class="profile-info">
+                <h1 id="profile-name"></h1>
+                <p id="profile-job" class="job"></p>
+                <p id="profile-exp" class="exp"></p>
+
+                <button class="btn-orange" id="profile-sign">Записаться</button>
+            </div>
+        </div>
+
+        <h2>Направления</h2>
+        <ul id="profile-skills" class="skills-list"></ul>
+
+        <h2>Расписание тренера</h2>
+        <table class="trainer-schedule">
+            <thead>
+                <tr>
+                    <th>День</th>
+                    <th>Время</th>
+                    <th>Тренировка</th>
+                </tr>
+            </thead>
+            <tbody id="profile-schedule"></tbody>
+        </table>
+
+    </div>
+</section>
+
+<!-- POPUPS -->
+<script src="js/global.js" defer></script>
+<script src="js/trainer-profile.js" defer></script>
+
+</body>
+</html>

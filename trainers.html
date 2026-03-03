@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA FITNESS — Тренеры</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trainers.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+
+        <a href="index.html" class="logo" id="scrollTopBtn">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">ULTRA FITNESS</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="training.html">Тренировки</a>
+            <a href="trainers.html" class="active">Тренеры</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div id="burger" class="burger"><span></span><span></span><span></span></div>
+
+        <a href="#popup-login" class="btn-orange open-popup header-login-btn">Войти</a>
+    </div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="training.html">Тренировки</a>
+    <a href="trainers.html" class="active">Тренеры</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+</div>
+
+<!-- HERO -->
+<section class="hero hero-small">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content fade-up">
+        <h1>Наши тренеры</h1>
+        <p>Профессионалы ULTRA FITNESS, которые приведут вас к результату.</p>
+    </div>
+</section>
+
+<!-- TRAINERS -->
+<section class="trainers-section fade-up">
+    <div class="container">
+        <h2>Команда профессионалов</h2>
+
+        <!-- FILTER -->
+        <div class="trainers-filter">
+            <select id="trainerFilter">
+                <option value="">Все направления</option>
+                <option value="Йога">Йога</option>
+                <option value="Кардио">Кардио</option>
+                <option value="HIIT">HIIT</option>
+                <option value="Единоборства">Единоборства</option>
+                <option value="Силовые тренировки">Силовые тренировки</option>
+            </select>
+        </div>
+
+        <div class="trainers-grid">
+
+            <!-- T1 -->
+            <div class="trainer-card">
+                <img src="https://www.gloss.ee/wp-content/uploads/2017/10/16464490_417812291894626_2836077874618826752_n.jpg" alt="">
+                <h3>Ольга</h3>
+                <p class="job">Функциональный тренинг, Кардио</p>
+                <p class="exp">Опыт: 6 лет</p>
+                <button class="btn-orange trainer-profile-btn" data-id="1">Профиль</button>
+            </div>
+
+            <!-- T2 -->
+            <div class="trainer-card">
+                <img src="https://img.freepik.com/free-photo/close-up-of-fit-woman-s-torso-with-her-hands-on-hips-on-grey-wall_231208-4494.jpg?size=626&ext=jpg" alt="">
+                <h3>Ирина</h3>
+                <p class="job">Йога, Стретчинг</p>
+                <p class="exp">Опыт: 4 года</p>
+                <button class="btn-orange trainer-profile-btn" data-id="2">Профиль</button>
+            </div>
+
+            <!-- T3 -->
+            <div class="trainer-card">
+                <img src="https://avatars.mds.yandex.net/get-ydo/3927445/2a00000178ba203de811798ce4f401fce499/diploma" alt="">
+                <h3>Денис</h3>
+                <p class="job">HIIT, Кардио</p>
+                <p class="exp">Опыт: 5 лет</p>
+                <button class="btn-orange trainer-profile-btn" data-id="3">Профиль</button>
+            </div>
+
+            <!-- T4 -->
+            <div class="trainer-card">
+                <img src="https://yandex-images.clstorage.net/Ua5Eg1215/42db5ciekd/gZ_l5SIRfsO1z6PQzbErxW8k5BwzqSoHq2GH4mgjXCVAGny4-pk4dtLACUMNEvhpnT3e1DeOL60m3Ws5NdP-X8La5vs9SGub8su1loXoeYBuOewCO6M_SJpbsoxNGWdacDla2bbOZCOEjhMeSiyXeehqj7B9wU6jSoE4eSmU1z--rquMXCNY0orvt8-BsSnVEhHsKAKnGli1YriYdRZEW3s4YPiGx2Q9t4RKC1IyshTDYaCHVu9OpluQK1AZld4AqK-nmXgBfvSGzZjwu48F8xkExhU1gwd6lE6phEMxXEBLFEPUiOx5E4ugUClVOrkQ2WiJomrYeaV3qzRMNZjnPZOFqr5BHXDKrca69buWJcYVGeoWJKEkQItSual8I2dFbQdb2p_IQAark3cCTiSMN9pgpatc0ViuS4MIWACZ0SuQjr6ldClpw5LLm_aLsz7nIDbuOAOUGmC3bqKVXjxJcFYfavKc5m4ou5lrB3cRrRH4ZY-vbPx9gG6ZKmwYlM4vpaSevWcnbcaSy7DAtpcf2AgezwowpxNsq0KetUEjZnBoMFD_m8JwA7OdcCR1MrEz6HynkWzVf4hosDN5HZTMDLmZjqFnHETRuPiH1Yu2BdU5MNERPa88faJIhot5MkdxWxpx3Kf5fBCbgnYAXTKJHux6oZVjxFGDWKEQdBWH8Cu3or6ZWSp517XohuGJmgLwAhDuPw-GI2azS6KBayxnWF03atmi4G4TsYV7C1EAoS7gXri2Yd51qmiQN00XtOUsiIqdm2UHbeWwyJ3br60i5wIzyRAUhzdFs0KUj3YTR29vMmLAl9ZIBYCjWipNO4czyXm4nEP0Z5l9gS1nEa7-GJ2lsYVGHUrQi92l0LeaId8PPukFE7QhZL9UtZV4C2tvYAxA1YHXbjGVkkc9fhGFFOFoqKd5_kC5fa02aBqH0CqYo6-lZz1t84L4uNeUrCHXFC_NFyWNJUqKQKKDdSc" alt="">
+                <h3>Анна</h3>
+                <p class="job">Групповые тренировки</p>
+                <p class="exp">Опыт: 7 лет</p>
+                <button class="btn-orange trainer-profile-btn" data-id="4">Профиль</button>
+            </div>
+
+            <!-- T5 -->
+            <div class="trainer-card">
+                <img src="https://yandex-images.clstorage.net/Ua5Eg1215/42db5ciekd/gZ_l5SIRfsO1z6PQzbErxW8k5BwzqSoHq2GH4mgjXCVYEmf2toAzf9LBD18MXPo4nT3e1T-GLvZ-i2xlZNKqCsDY7qw9RmyT8c3klNDreIQlOaoqD4ANQaBtlKV7GXdJeDxM2J3mTQ6vj1wCWxawd994sbov8nGuSpsrWTy09QyJlaqAWz9K1of_gvOTlw7QLT_oFDSfHkCfUZiFfjZOQ2wEQ_uc7Uw0jr9VAkUlui7KYK-fQtl6gX2wBVk5peQfoKWriWQpS9qS26DVtZss_xIF1jgSlAtqoma8mFwXYlJwMmTjh91gF6Kxfh9rGZ406GenlEbDc6hYjDJuOonfALyJprBZEmHXteK824uwJ90XBc8YJ5gWRqF3nrtmCH5CXQ122IL7cw-splomfjmtE8N8uaFhwHuEUbo7TzG19zyovKeGTxFqw67XiMKCjyr8FDXqAwatOUKPUKuFRjRCWWEvafa3wGs-hKV0CFAppw_GRYyAR-J-rlWKFmofkO0enKSqmUskQOO2xIbGh48q1yIIziI5hRFjvWOYjEoobmVBMHbZt_5EBImiUBZ7IaMU5UevnGXyZ4Zrij9oF5bEB4mhqptoOH3zqsS975ClGeA3Ne84NLQ_faZukKNbIWR9fwhn-LbNbiWqnmsaaAm8EsFvr6RI9mGAb4UuRhym1SSEqbmnTzZGw5L6i9KWqAnhAzfDPxGPH0KIXLm8QDBnWXUaedify0M-r5tyCGsjux_KY52MePpFmUyHNGI1luQDvauKskgJbuCQxqbGpK0p-jkR9B8Gjzxlp0e4qGMwbm97B0b4qPlGNrauRC59Ep0-63-mqmXTYplmpR5wBoP1GZetkKl8HEHMjuW84ZGWPMIyCcMcPoIxRbJAi75CPHhOYQle1Kj2eBSjuEUISQesI_xMjKhC-3OJXZ8UVyaD2QKYprmHThlH0q7EnMaynxnfNSr1HDaZIGGgdrK6bAk" alt="">
+                <h3>Андрей</h3>
+                <p class="job">Единоборства, Бокс</p>
+                <p class="exp">Опыт: 8 лет</p>
+                <button class="btn-orange trainer-profile-btn" data-id="5">Профиль</button>
+            </div>
+
+            <!-- T6 -->
+            <div class="trainer-card">
+                <img src="https://img.freepik.com/premium-photo/personal-trainer-healthy-body-face-male-bodybuilder-training-exercise-goals_137441-6738.jpg?semt=ais_hybrid&w=740" alt="">
+                <h3>Александр</h3>
+                <p class="job">Тренажёрный зал</p>
+                <p class="exp">Опыт: 10 лет</p>
+                <button class="btn-orange trainer-profile-btn" data-id="6">Профиль</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- POPUP TRAINER PROFILE -->
+<div class="popup" id="trainer-profile">
+    <div class="popup-content trainer-profile-content">
+
+        <span class="popup-close">&times;</span>
+
+        <img class="trainer-photo" src="" alt="trainer">
+
+        <h3 id="trainer-name"></h3>
+        <p class="trainer-job"></p>
+        <p class="trainer-exp"></p>
+
+        <h4>Направления:</h4>
+        <ul id="trainer-skills"></ul>
+
+        <button class="btn-orange popup-close">Закрыть</button>
+    </div>
+</div>
+
+
+<!-- POPUPS (LOGIN / REGISTER / RECOVER / SUCCESS)-->
+
+<div class="popup" id="popup-login">
+    <div class="popup-content">
+        <h3>Вход</h3>
+
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+
+        <button class="btn-orange login-btn">Войти</button>
+
+        <div class="popup-links">
+            <a href="register.html" class="reg-link">Регистрация</a>
+            <a class="right open-popup" href="#popup-recover">Забыли пароль?</a>
+        </div>
+
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-register">
+    <div class="popup-content">
+        <h3>Регистрация</h3>
+        <input type="text" placeholder="Имя">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+        <button class="btn-orange">Создать аккаунт</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-recover">
+    <div class="popup-content">
+        <h3>Восстановление пароля</h3>
+        <input type="email" placeholder="Введите E-mail">
+        <button class="btn-orange">Отправить</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-success">
+    <div class="popup-content">
+        <h3>Спасибо!</h3>
+        <p>Ваш запрос отправлен.</p>
+        <button class="btn-orange popup-close">Закрыть</button>
+    </div>
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/trainers.js" defer></script>
+<script src="js/global.js" defer></script>
+<script src="js/login.js" defer></script>
+
+</body>
+</html>

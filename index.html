@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA FITNESS — Главная</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+
+<body>
+
+<!--  HEADER-->
+<header class="header">
+    <div class="container header-flex">
+
+        <!-- ЛОГО -->
+        <a href="#" class="logo" id="scrollTopBtn">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">ULTRA FITNESS</span>
+        </a>
+
+        <!-- МЕНЮ -->
+        <nav class="nav">
+            <a href="#">Главная</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="training.html">Тренировки</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <!-- БУРГЕР ДЛЯ МОБИЛКИ -->
+        <div id="burger" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="userMenuBlock" class="user-menu hidden">
+    <img id="userAvatarSmall" src="images/default-avatar.png" class="user-avatar-small">
+    <span id="userNameSmall"></span>
+    <div id="userDropdown" class="user-dropdown hidden">
+        <a href="profile.html">Мой профиль</a>
+        <a href="#" id="goSubscription">Абонемент</a>
+        <a href="#" id="logoutBtn" class="logout-red">Выйти</a>
+    </div>
+</div>
+
+
+        <!-- ВОЙТИ -->
+        <a href="#popup-login" class="btn-orange open-popup header-login-btn">Войти</a>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+    <a href="#">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="training.html">Тренировки</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+</div>
+
+
+<!-- HERO  -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>ТВОЙ ПУТЬ К СИЛЕ НАЧИНАЕТСЯ ЗДЕСЬ</h1>
+        <p>ULTRA FITNESS — современная площадка для тех, кто хочет развиваться, улучшать тело и достигать максимальных результатов.</p>
+        <a href="#prices" class="btn-orange big-btn">Выбрать тариф</a>
+    </div>
+</section>
+
+
+<!--  ABOUT  -->
+<section class="about">
+    <div class="container about-container">
+
+       <div class="about-text fade-left">
+            <h2>О нас</h2>
+            <p>ULTRA FITNESS — это современный спортивный зал с премиальным оборудованием, профессиональными тренерами и продуманной тренировочной инфраструктурой.</p>
+            <p>Мы предлагаем удобный личный кабинет, онлайн-расписание, систему записи и поддержку Telegram-бота.</p>
+        </div>
+
+        <div class="about-img fade-right">
+            <img src="https://www.varyag-club.ru/upload/iblock/2be/1nwu5cr6fbu2us7hmg89s7u2d38l56ni.jpg" alt="О нас">
+        </div>
+    </div>
+</section>
+
+
+<!--  GALLERY  -->
+<section class="gallery">
+    <div class="container">
+        <h2>Галерея</h2>
+    </div>
+
+    <div class="swiper gallery-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="https://www.varyag-club.ru/upload/iblock/c39/l7wcqjqh3f8ne6pfadlx539zoksbj4gs.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.varyag-club.ru/upload/iblock/650/gjjvzo296vn38siwnomrhcqczb1xwzwd.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.varyag-club.ru/upload/iblock/a0c/b3va1p0l280emryjjclnpceppq4ysybm.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.varyag-club.ru/upload/iblock/6fb/lu0n3rer726b42r2say372ysmg45k864.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.varyag-club.ru/upload/iblock/682/uynq8t7r14tebqd56iz2y213wfv8714f.jpg">
+            </div>
+
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+<!--  DIRECTIONS  -->
+<section class="directions">
+    <div class="container">
+        <h2>Направления тренировок</h2>
+
+        <div class="directions-grid">
+
+            <div class="direction-card scale-in">
+                <span class="icon">🏋️</span>
+                <h3>Тренажёрный зал</h3>
+                <p>Профессиональные тренажёры для любых целей.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">🔥</span>
+                <h3>Функциональный тренинг</h3>
+                <p>Развитие силы, ловкости и выносливости.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">💪</span>
+                <h3>Персональные тренировки</h3>
+                <p>Индивидуальный подход с тренером.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">🏃‍♂️</span>
+                <h3>Кардио-зона</h3>
+                <p>Современные беговые дорожки и тренажёры.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">🧘</span>
+                <h3>Стретчинг</h3>
+                <p>Гибкость, расслабление и профилактика травм.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">👥</span>
+                <h3>Групповые занятия</h3>
+                <p>Энергия команды и поддержка.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">🥊</span>
+                <h3>Единоборства</h3>
+                <p>Бокс, кикбоксинг, ММА для всех уровней.</p>
+            </div>
+
+            <div class="direction-card scale-in">
+                <span class="icon">⏱️</span>
+                <h3>HIIT тренировки</h3>
+                <p>Высокоинтенсивные интервалы.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ADVANTAGES -->
+<section class="advantages">
+    <div class="container">
+        <h2>Преимущества ULTRA FITNESS</h2>
+
+        <div class="advantages-grid">
+
+            <div class="adv-card fade-up">
+                <span class="icon">⭐</span>
+                <h3>Премиальное оборудование</h3>
+                <p>Тренажёры последнего поколения.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">🏆</span>
+                <h3>Профессиональные тренеры</h3>
+                <p>Опытные сертифицированные специалисты.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">📅</span>
+                <h3>Онлайн-расписание</h3>
+                <p>Удобный просмотр и фильтры.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">⚡</span>
+                <h3>Быстрая запись</h3>
+                <p>Через сайт или Telegram-бота.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">🔒</span>
+                <h3>Личный кабинет</h3>
+                <p>История посещений и тренировки.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">🔁</span>
+                <h3>Синхронизация</h3>
+                <p>Интеграция с Google Calendar.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">💬</span>
+                <h3>Техподдержка</h3>
+                <p>Оперативные ответы.</p>
+            </div>
+
+            <div class="adv-card fade-up">
+                <span class="icon">💎</span>
+                <h3>Комфорт и стиль</h3>
+                <p>Современный интерьер и атмосфера.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA BEFORE PRICES -->
+<section class="cta-banner mini-cta">
+    <div class="container">
+        <h2>Выбери свой путь</h2>
+        <p>Подбери подходящий тариф и начни тренироваться уже сегодня.</p>
+        <a href="#prices" class="btn-orange big-btn">Перейти к тарифам</a>
+    </div>
+</section>
+
+
+<!-- PRICES -->
+<section class="prices" id="prices">
+    <div class="container">
+        <h2>Тарифы</h2>
+
+        <div class="price-grid">
+
+            <div class="price-card fade-up">
+                <h3>BASIC</h3>
+                <p class="price">1990 ₽ / мес</p>
+                <ul>
+                    <li>Тренажерный зал</li>
+                    <li>Кардио-зона</li>
+                </ul>
+                <a class="btn-orange">Выбрать</a>
+            </div>
+
+            <div class="price-card highlight fade-up">
+                <h3>OPTIMAL</h3>
+                <p class="price">3490 ₽ / мес</p>
+                <ul>
+                    <li>Все зоны</li>
+                    <li>Групповые занятия</li>
+                    <li>Онлайн-расписание</li>
+                </ul>
+                <a class="btn-orange">Выбрать</a>
+            </div>
+
+            <div class="price-card fade-up">
+                <h3>ULTRA</h3>
+                <p class="price">4990 ₽ / мес</p>
+                <ul>
+                    <li>Персональные тренировки</li>
+                    <li>Полный доступ</li>
+                    <li>Синхронизация тренировок</li>
+                </ul>
+                <a class="btn-orange">Выбрать</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--  TRIAL FORM  -->
+<section class="trial">
+    <div class="container">
+        <h2>Запишись на пробную тренировку</h2>
+
+        <form class="trial-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="+7 (999) 000-00-00" required>
+
+            <select required>
+                <option value="">Выберите направление</option>
+                <option>Тренажерный зал</option>
+                <option>Персональная тренировка</option>
+                <option>Кардио</option>
+                <option>Функциональный тренинг</option>
+                <option>Стретчинг</option>
+                <option>Групповая тренировка</option>
+            </select>
+
+            <button class="btn-orange">Отправить</button>
+        </form>
+    </div>
+</section>
+
+
+<!--POPUPS  -->
+
+<!-- LOGIN -->
+<div class="popup" id="popup-login">
+    <div class="popup-content">
+        <h2>Вход</h2>
+
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+
+        <button class="btn-orange login-btn">Войти</button>
+
+        <span id="clientHeaderName" class="client-name-header"></span>
+
+        <div class="popup-links">
+            <a href="register.html" class="reg-link">Регистрация</a>
+            <a class="right open-popup" href="#popup-recover">Забыли пароль?</a>
+        </div>
+
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+
+<!-- RECOVER -->
+<div class="popup" id="popup-recover">
+    <div class="popup-content">
+        <h2>Восстановление</h2>
+        <input type="email" placeholder="Введите e-mail">
+        <button class="btn-orange">Выслать инструкцию</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<!-- SUCCESS -->
+<div class="popup" id="popup-success">
+    <div class="popup-content">
+        <h2>Спасибо!</h2>
+        <p>Ваша заявка отправлена.</p>
+        <button class="btn-orange popup-close">Закрыть</button>
+    </div>
+</div>
+
+<!--  FOOTER  -->
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-col">
+            <h4>ULTRA FITNESS</h4>
+            <p>Современный спортивный клуб с премиальной атмосферой.</p>
+            <p>© 2025 Все права защищены</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p>г. Саратов, ул. Большая садовая, 94</p>
+            <p>+7 (986) 998-40-53</p>
+            <p>Работаем ежедневно: 7:00–22:00</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Информация</h4>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Пользовательское соглашение</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Мы онлайн</h4>
+            <div class="footer-social">
+                <a href="#"><img src="img/vk.svg"></a>
+                <a href="#"><img src="img/tg.svg"></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- SCRIPTS  -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/script.js" defer></script>
+<script src="js/global.js" defer></script>
+<script src="js/login.js" defer></script>
+</body>
+</html>

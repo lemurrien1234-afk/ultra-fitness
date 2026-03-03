@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренировки — ULTRA FITNESS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/training.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+        <a href="index.html" class="logo" id="scrollTopBtn">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">ULTRA FITNESS</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="schedule.html">Расписание</a>
+            <a href="training.html" class="active">Тренировки</a>
+            <a href="trainers.html">Тренеры</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div id="burger" class="burger"><span></span><span></span><span></span></div>
+
+        <a href="#popup-login" class="btn-orange open-popup header-login-btn">Войти</a>
+    </div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="training.html">Тренировки</a>
+    <a href="trainers.html">Тренеры</a>
+    <a href="contacts.html">Контакты</a>
+
+    <!-- кнопка тоже должна иметь open-popup -->
+    <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+</div>
+
+<!-- HERO -->
+<section class="hero-small">
+    <div class="hero-content">
+        <h1>Направления тренировок</h1>
+        <p>Выбери тренировку под свою цель</p>
+    </div>
+</section>
+
+<!-- TRAINING LIST -->
+<section class="training-list fade-up">
+    <div class="container">
+        <div class="training-grid">
+
+            <!-- КАРТОЧКИ -->
+            <div class="training-card" data-modal="functional">
+                <img src="https://molotfitness.ru/wp-content/uploads/2025/08/Fitbol-3-min.png" alt="">
+                <h3>Функциональный тренинг</h3>
+                <p>Укрепляет мышцы, улучшает координацию и физическую форму.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+            <div class="training-card" data-modal="yoga">
+                <img src="https://i.pinimg.com/736x/a6/c0/0b/a6c00b8e80984da87ef2db27dd70e7bc.jpg" alt="">
+                <h3>Йога</h3>
+                <p>Расслабление, дыхательные техники, гибкость.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+            <div class="training-card" data-modal="cardio">
+                <img src="https://img.freepik.com/premium-photo/starting-run-side-view-sporty-young-woman-sportswear-is-standing-treadmill_386167-4619.jpg" alt="">
+                <h3>Кардио</h3>
+                <p>Сжигание калорий и укрепление сердца.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+            <div class="training-card" data-modal="fight">
+                <img src="https://blogs.rdxsports.com/wp-content/uploads/2025/05/Boxing-Defense.jpg" alt="">
+                <h3>Единоборства</h3>
+                <p>Сила, реакция, дисциплина и самооборона.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+            <div class="training-card" data-modal="power">
+                <img src="https://images.ctfassets.net/3s5io6mnxfqz/NdDOVjra6sSyAKcA4aDoY/6c713a1bcf8b91446e110a2186a0c3f8/AdobeStock_202321907_2.jpeg" alt="">
+                <h3>Силовые тренировки</h3>
+                <p>Рост мышц и развитие силы.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+            <div class="training-card" data-modal="stretch">
+                <img src="https://io.sb.by/storage01/iblock/b4c/b4cc1f162aaf148ebf6be5ab1ec04c30/456e8dcf12900bb4c047a45d8c76ab88.jpg" alt="">
+                <h3>Стретчинг</h3>
+                <p>Повышение гибкости и пластичности.</p>
+                <button class="btn-orange training-info-btn">Подробнее</button>
+            </div>
+
+        </div>
+
+        <div class="center-btn">
+            <a href="trainers.html" class="btn-orange big-btn">Выбрать тренера</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- МОДАЛЬНЫЕ ОКНА -->
+<div class="modal-bg" id="modal-functional">
+    <div class="modal-window">
+        <h3>Функциональный тренинг</h3>
+        <p>Это тренировки на развитие силы, ловкости, баланса и выносливости...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-yoga">
+    <div class="modal-window">
+        <h3>Йога</h3>
+        <p>Йога помогает восстановить баланс, улучшить дыхание и гибкость...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-cardio">
+    <div class="modal-window">
+        <h3>Кардио</h3>
+        <p>Высокоэффективная тренировка на выносливость, сердце и жиросжигание...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-fight">
+    <div class="modal-window">
+        <h3>Единоборства</h3>
+        <p>Работа над реакцией, силой удара, дисциплиной и техникой...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-power">
+    <div class="modal-window">
+        <h3>Силовые тренировки</h3>
+        <p>Увеличение мышечной массы, развитие силы и выносливости...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+<div class="modal-bg" id="modal-stretch">
+    <div class="modal-window">
+        <h3>Стретчинг</h3>
+        <p>Гибкость, расслабление мышц, улучшение осанки...</p>
+        <button class="btn-orange modal-close">Закрыть</button>
+    </div>
+</div>
+
+
+
+<!--  POPUPS -->
+<div class="popup" id="popup-login">
+    <div class="popup-content">
+        <h3>Вход</h3>
+
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+
+        <button class="btn-orange login-btn">Войти</button>
+
+        <div class="popup-links">
+            <a href="register.html" class="reg-link">Регистрация</a>
+            <a class="right open-popup" href="#popup-recover">Забыли пароль?</a>
+        </div>
+
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-register">
+    <div class="popup-content">
+        <h3>Регистрация</h3>
+        <input type="text" placeholder="Имя">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+        <button class="btn-orange">Создать аккаунт</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-recover">
+    <div class="popup-content">
+        <h3>Восстановление пароля</h3>
+        <input type="email" placeholder="Введите E-mail">
+        <button class="btn-orange">Отправить</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-success">
+    <div class="popup-content">
+        <h3>Спасибо!</h3>
+        <p>Ваша заявка отправлена.</p>
+        <button class="btn-orange popup-close">Закрыть</button>
+    </div>
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/training.js" defer></script>
+<script src="js/global.js" defer></script>
+<script src="js/login.js" defer></script>
+
+</body>
+</html>

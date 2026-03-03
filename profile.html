@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Личный кабинет — ULTRA FITNESS</title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body>
+
+<div class="profile-container">
+
+  <!-- HERO -->
+  <section class="profile-hero">
+    <div class="profile-hero-inner">
+
+      <div class="profile-left">
+        <div class="avatar-wrapper">
+          <img id="avatarImage" src="images/default-avatar.png" alt="avatar">
+        </div>
+      </div>
+
+      <div class="profile-right">
+        <h1 id="clientName" class="client-name">
+          Имя Фамилия
+        </h1>
+
+        <div class="stats-row">
+          <div class="mini-stat">
+            <span>Последняя тренировка</span>
+            <b id="lastWorkout">01.12.2025</b>
+          </div>
+
+          <div class="mini-stat">
+            <span>Тренировок за неделю</span>
+            <b id="weeklyCount">3</b>
+          </div>
+
+          <div class="mini-stat">
+            <span>Дата регистрации</span>
+            <b id="registerDate">01.09.2025</b>
+          </div>
+
+          <div class="mini-stat">
+            <span>Цель</span>
+            <b id="clientGoal">Похудение</b>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- GRID КАРТОЧЕК (оставили только один набор) -->
+  <section class="dashboard-grid">
+
+    <div class="dash-card active" data-tab="body">
+      <h3>Показатели тела</h3>
+      <p>Вес, рост, ИМТ</p>
+    </div>
+
+    <div class="dash-card" data-tab="progress">
+      <h3>Прогресс</h3>
+      <p>Динамика результатов</p>
+    </div>
+
+    <div class="dash-card" data-tab="activity">
+      <h3>Активность</h3>
+      <p>Посещаемость</p>
+    </div>
+
+    <div class="dash-card" data-tab="favorites">
+      <h3>⭐ Избранное</h3>
+    </div>
+
+    <div class="dash-card" data-tab="upcoming">
+      <h3>📅 Ближайшие тренировки</h3>
+    </div>
+
+    <div class="dash-card" data-tab="history">
+      <h3>🕒 История</h3>
+    </div>
+
+  </section>
+
+  <!-- 🔥 ДИНАМИЧЕСКИЙ КОНТЕНТ -->
+  <section id="dashboardContent" class="dashboard-content"></section>
+
+  <!-- 🔥 ТРЕНЕР -->
+  <section class="trainer-card">
+    <img src="images/default-avatar.png" class="trainer-photo">
+    <div>
+      <h3>Ваш тренер</h3>
+      <p>Иван Иванов</p>
+      <button class="btn-orange" onclick="openTrainerChat()">Написать</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- 🔥 ЧАТ -->
+<div id="trainerChat" class="chat-modal">
+  <div class="chat-box">
+    <h3>Чат с тренером</h3>
+    <textarea placeholder="Напишите сообщение..."></textarea>
+    <button class="btn-orange">Отправить</button>
+    <button class="btn-close" onclick="closeTrainerChat()">Закрыть</button>
+  </div>
+</div>
+
+<!-- Chart.js (нужно для графиков) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Твой профильный JS (который я дал для полной замены) -->
+<script src="js/profile.js"></script>
+
+</body>
+</html>

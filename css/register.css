@@ -1,0 +1,239 @@
+body {
+    background: url("https://i.ibb.co/b6my6tW/concrete-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Оранжевые источники света */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255,120,0,0.20), transparent 70%);
+    z-index: -1;
+    filter: blur(35px);
+}
+
+body::before {
+    top: -200px;
+    left: -200px;
+}
+body::after {
+    bottom: -200px;
+    right: -200px;
+}
+
+
+header {
+    padding: 20px 30px;
+}
+
+.logo {
+    color: #ff7a00;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ff7a00;
+}
+
+.step-label {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #bbb;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff7a00;
+}
+
+.phone-box {
+    display: flex;
+    gap: 8px;
+}
+
+.phone-box button {
+    width: 120px;
+    font-size: 14px;
+    background: #ff7a00;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.next-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    border: none;
+    font-size: 17px;
+    border-radius: 12px;
+    background: #ff7a00;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.next-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
+
+.grey {
+    background: #333;
+}
+
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+
+.error {
+    color: #ff4b4b;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.error-field {
+    font-size: 13px;
+    color: #ff4b4b;
+    margin-top: -5px;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .35;
+}
+.register-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box {
+    background: rgba(8,8,8,0.82);
+    border: 2px solid rgba(255, 122, 0, 0.45);
+    padding: 42px 55px;
+    border-radius: 0;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 35px rgba(255,120,0,0.2);
+    max-width: 420px;
+    width: 92%;
+    position: relative;
+}
+.register-box h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff7a00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.register-box h2::after {
+    content: "";
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("https://i.ibb.co/jTF1Wnv/scratches.png");
+    opacity: 0.65;
+}
+.register-box input {
+    width: 100%;
+    background: rgba(25,25,25,.6);
+    border: 1px solid #444;
+    padding: 12px;
+    margin-top: 12px;
+    color: #fff;
+}
+
+.register-box input:focus {
+    border: 1px solid #ff7a00;
+    box-shadow: 0 0 10px rgba(255,120,0,.4);
+}
+
+.btn-orange {
+    border-radius: 0;
+    background: #ff7a00;
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: .5px;
+    box-shadow: 0 0 10px rgba(255,120,0,.55);
+}
+
+.btn-orange:hover {
+    background: #ffa53c;
+    box-shadow: 0 0 15px rgba(255,140,0,.65);
+    transform: translateY(-2px);
+}
+/* контейнер с формой */
+.registration-container {
+    position: relative;
+    z-index: 10; 
+}
+
+/* particles слой  на задний план */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}

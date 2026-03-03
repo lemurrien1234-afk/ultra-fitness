@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA FITNESS — Расписание</title>
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-flex">
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">U</div>
+            <span class="logo-text">ULTRA FITNESS</span>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="schedule.html" class="active">Расписание</a>
+            <a href="training.html">Тренировки</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div id="burger" class="burger"><span></span><span></span><span></span></div>
+
+        <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+    </div>
+</header>
+
+<div id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Главная</a>
+    <a href="schedule.html">Расписание</a>
+    <a href="training.html">Тренировки</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="#popup-login" class="btn-orange open-popup">Войти</a>
+</div>
+
+<!-- HERO -->
+<section class="hero hero-small">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content fade-up">
+        <h1>Расписание тренировок</h1>
+        <p>Выбирай удобное время и записывайся онлайн.</p>
+    </div>
+</section>
+
+<!-- MINI CALENDAR -->
+<section class="schedule-calendar fade-up">
+    <div class="container calendar-container">
+        <button class="day-btn active" data-day="Понедельник">Пн</button>
+        <button class="day-btn" data-day="Вторник">Вт</button>
+        <button class="day-btn" data-day="Среда">Ср</button>
+        <button class="day-btn" data-day="Четверг">Чт</button>
+        <button class="day-btn" data-day="Пятница">Пт</button>
+        <button class="day-btn" data-day="Суббота">Сб</button>
+        <button class="day-btn" data-day="Воскресенье">Вс</button>
+        <button class="day-btn" data-day="all">Все</button>
+    </div>
+</section>
+
+<!-- FILTERS -->
+<section class="schedule-filters fade-up">
+    <div class="container filter-container">
+
+        <select id="filter-type">
+            <option value="">Тип тренировки</option>
+            <option>Тренажерный зал</option>
+            <option>Кардио</option>
+            <option>Функциональный тренинг</option>
+            <option>Групповая тренировка</option>
+            <option>Стретчинг</option>
+            <option>Единоборства</option>
+        </select>
+
+        <select id="filter-trainer">
+            <option value="">Тренер</option>
+            <option>Александр</option>
+            <option>Ирина</option>
+            <option>Ольга</option>
+            <option>Анна</option>
+            <option>Денис</option>
+            <option>Андрей</option>
+        </select>
+
+        <select id="filter-day">
+            <option value="">День недели</option>
+            <option>Понедельник</option>
+            <option>Вторник</option>
+            <option>Среда</option>
+            <option>Четверг</option>
+            <option>Пятница</option>
+            <option>Суббота</option>
+            <option>Воскресенье</option>
+        </select>
+
+    </div>
+</section>
+<div class="trainer-select-bottom">
+    <a href="trainers.html" class="trainer-list-link">Выбрать тренера</a>
+</div>
+
+<section class="schedule-table fade-up">
+    <div class="container">
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Тренировка</th>
+                    <th>Тренер</th>
+                    <th>Зал</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="schedule-body"></tbody>
+            </table>
+        </div>
+
+        <!-- КНОПКА ПОД ТАБЛИЦЕЙ -->
+        <div class="schedule-bottom-btn">
+            <a href="trainers.html" class="btn-orange big-btn">
+                Посмотреть тренеров
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- POPUP SIGN -->
+<div class="popup" id="popup-sign">
+    <div class="popup-content">
+        <h3 id="popup-training-name">Запись</h3>
+
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" placeholder="+7 (999) 000-00-00">
+
+        <button class="btn-orange popup-close">Готово</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/global.js" defer></script>
+<script src="js/schedule.js" defer></script>
+<!-- POPUPS -->
+<div class="popup" id="popup-login">
+    <div class="popup-content">
+        <h3>Вход</h3>
+
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+
+        <button class="btn-orange login-btn">Войти</button>
+
+        <div class="popup-links">
+            <a href="register.html" class="reg-link">Регистрация</a>
+            <a class="right open-popup" href="#popup-recover">Забыли пароль?</a>
+        </div>
+
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-register">
+    <div class="popup-content">
+        <h3>Регистрация</h3>
+        <input type="text" placeholder="Имя">
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Пароль">
+        <button class="btn-orange">Создать аккаунт</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-recover">
+    <div class="popup-content">
+        <h3>Восстановление пароля</h3>
+        <input type="email" placeholder="Введите E-mail">
+        <button class="btn-orange">Отправить</button>
+        <span class="popup-close">&times;</span>
+    </div>
+</div>
+
+<div class="popup" id="popup-success">
+    <div class="popup-content">
+        <h3>Спасибо!</h3>
+        <p>Ваше сообщение отправлено.</p>
+        <button class="btn-orange popup-close">Закрыть</button>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/schedule.js" defer></script>
+<script src="js/global.js" defer></script>
+<script src="js/login.js" defer></script>
+
+</body>
+</html>

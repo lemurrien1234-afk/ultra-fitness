@@ -1,0 +1,247 @@
+/* ================= BASE ================= */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* ================= HERO ================= */
+
+.profile-hero {
+  background: #000;
+  padding: 40px 20px 10px;
+}
+
+.profile-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile-left { display: flex; align-items: center; }
+
+.avatar-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  box-shadow: 0 0 25px rgba(255,122,0,0.45);
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #111;
+}
+
+.client-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* ================= MINI STATS ================= */
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.mini-stat {
+  background: #0e0e0e;
+  border: 1px solid rgba(255,122,0,0.25);
+  border-radius: 14px;
+  padding: 12px 16px;
+  min-width: 170px;
+}
+
+.mini-stat span {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.mini-stat b {
+  color: #ff7a00;
+  font-size: 16px;
+}
+
+/* ================= DASHBOARD GRID (cards) ================= */
+
+.dashboard-grid {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* Мы используем .dash-card (по актуальному HTML) */
+.dash-card {
+  background: #0b0b0b;
+  border-radius: 18px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dash-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(255,122,0,0.6);
+  box-shadow: 0 10px 35px rgba(255,122,0,0.25);
+}
+
+.dash-card.active {
+  border-color: #ff7a00;
+  box-shadow: 0 0 30px rgba(255,122,0,0.35);
+}
+
+.dash-card h3 {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.dash-card p {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ================= CONTENT ================= */
+
+.dashboard-content {
+  margin: 25px auto 0;
+  max-width: 1200px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 120px;
+}
+
+/* аккуратно под форму замеров, не меняя дизайн */
+.dashboard-content input {
+  outline: none;
+}
+.dashboard-content input:focus {
+  border-color: #ff7a00 !important;
+  box-shadow: 0 0 0 2px rgba(255,122,0,0.15);
+}
+
+/* канвас графика — чтобы не “выпрыгивал” */
+#progressChart {
+  width: 100% !important;
+}
+
+/* ================= TRAINER ================= */
+
+.trainer-card {
+  margin: 30px auto 0;
+  max-width: 1200px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #111;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #222;
+}
+
+.trainer-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-orange {
+  background: #ff7a00;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= CHAT ================= */
+
+.chat-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.chat-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  border: 1px solid #222;
+}
+
+.chat-box textarea {
+  width: 100%;
+  height: 80px;
+  margin: 10px 0;
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-close {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-row {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
